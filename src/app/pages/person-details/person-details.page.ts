@@ -27,9 +27,9 @@ export class PersonDetailsPage implements OnInit {
   
   sharePerson() {
     let email = {
-      to: 'lazoski@gmail.com',
-      subject: `I love this one: ${this.person.name}`,
-      body: `Can you remember the opening?<br><br>"${this.person.opening_crawl}"`,
+      to: "",
+      subject: `Hey, look at this!: ${this.person.name}`,
+      body: `This person is so cool, don't you think?<br><br>"${this.person.opening_crawl}"`,
       isHtml: true
     };
 

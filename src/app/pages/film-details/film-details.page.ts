@@ -40,13 +40,12 @@ export class FilmDetailsPage implements OnInit {
       this.isFavorite = false;
     });
   }
-
-
+  
   shareFilm() {
     let email = {
-      to: 'lazoski@gmail.com',
-      subject: `I love this one: ${this.film.title}`,
-      body: `Can you remember the opening?<br><br>"${this.film.opening_crawl}"`,
+      to: "",
+      subject: `I love this film: ${this.film.title}`,
+      body: `Do you like it? We should watch it some time. <br><br>"${this.film.opening_crawl}"`,
       isHtml: true
     };
 
