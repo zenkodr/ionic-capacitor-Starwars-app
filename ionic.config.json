@@ -1,0 +1,8 @@
+{
+  "name": "Starwars-app",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

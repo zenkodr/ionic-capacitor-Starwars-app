@@ -1,0 +1,32 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs/planets"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ planet?.name }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-card *ngIf="planet" class="planet-card">
+    <ion-item class="planet-card" lines="none">
+      <ion-icon name="cloudy-night-outline" slot="start"></ion-icon>
+      Climate for {{ planet.name }}: {{ planet.climate }}
+    </ion-item> 
+
+    <ion-item class="planet-info" lines="none">
+      <ion-icon name="planet" slot="start"></ion-icon>
+      Rotation Period: {{ planet.rotation_period }}
+    </ion-item> 
+     
+    <ion-item class="planet-info1" lines="none">
+      <ion-icon name="people-outline" slot="start"></ion-icon>
+      Population: {{ planet.population }}
+    </ion-item>
+  </ion-card>
+ 
+<ion-button expand="full" (click)="sharePlanet()">Share by Email</ion-button>
+
+</ion-content>
+
