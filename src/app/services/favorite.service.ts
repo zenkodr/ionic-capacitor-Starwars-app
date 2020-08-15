@@ -15,13 +15,14 @@ export class FavoriteService {
     return this.storage.get(STORAGE_KEY);
   }
 
+ 
   isFavorite(filmId) {
     return this.getAllFavoriteFilms().then(result => {
       return result && result.indexOf(filmId) !== -1;
     });
   }
 
-  favoriteFilm(filmId) {
+   favoriteFilm(filmId) {
     return this.getAllFavoriteFilms().then(result => {
       result = result || [];
       result.push(filmId);

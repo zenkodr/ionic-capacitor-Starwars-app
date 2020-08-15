@@ -5,7 +5,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { ApiService } from 'src/app/services/api.service';
-import { FavoriteService } from 'src/app/services/favorite1.service';
+import { FavoriteService } from 'src/app/services/favorite.service';
 
 @Component({
   selector: 'app-person-details',
@@ -25,22 +25,6 @@ export class PersonDetailsPage implements OnInit {
     this.api.getPerson(id).subscribe(res => {
       this.person = res;
       console.log(res);
-    });
-
-    this.favoriteService.isFavorite(this.personId).then(isFav => {
-      this.isFavorite = isFav;
-    });
-  }
-
-  favoritePerson() {
-    this.favoriteService.favoritePerson(this.personId).then(() => {
-      this.isFavorite = true;
-    });
-  }
-
-  unfavoritePerson() {
-    this.favoriteService.unfavoritePerson(this.personId).then(() => {
-      this.isFavorite = false;
     });
   }
   

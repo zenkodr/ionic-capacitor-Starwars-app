@@ -1,19 +1,10 @@
 <!--referred to https://github.com/herbae/starwarsapp, for some of the code on this page, but later altered it. Also referred to tutorials from https://ionicacademy.com/ionic-crash-course/-->
-
 <ion-header>
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/tabs/people"></ion-back-button>
     </ion-buttons>
     <ion-title>{{ person?.name }}</ion-title>
-    <ion-buttons slot="end">
-      <ion-button (click)="unfavoritePerson()" *ngIf="isFavorite">
-        <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
-      </ion-button>
-      <ion-button (click)="favoritePerson()" *ngIf="!isFavorite">
-        <ion-icon name="star-outline" slot="icon-only"></ion-icon>
-      </ion-button>
-    </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
@@ -28,15 +19,15 @@
       <ion-icon name="eye-outline" slot="start"></ion-icon>
       Eye Color: {{ person.eye_color }}
     </ion-item> 
-     
+
     <ion-item class="person-info1" lines="none">
       <ion-icon name="walk-outline" slot="start"></ion-icon>
       Year Born: {{ person.birth_year }}
     </ion-item>
-    
+
 
 </ion-card>
 
 <ion-button expand="full" (click)="sharePerson()">Share by Email</ion-button>
 
-</ion-content>
+</ion-content> 
