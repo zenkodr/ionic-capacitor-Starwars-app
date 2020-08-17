@@ -3,9 +3,18 @@
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/tabs/planets"></ion-back-button>
     </ion-buttons>
-    <ion-title>{{ planet?.name }}</ion-title>
+    <ion-title>{{ planet?.title }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="unfavoritePlanet()" *ngIf="isFavorite1">
+        <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
+      </ion-button>
+      <ion-button (click)="favoritePlanet()" *ngIf="!isFavorite1">
+        <ion-icon name="star-outline" slot="icon-only"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
 </ion-header>
+
 
 <ion-content padding>
   <ion-card *ngIf="planet" class="planet-card">
