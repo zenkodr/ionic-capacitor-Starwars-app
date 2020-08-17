@@ -18,7 +18,7 @@ export class PersonDetailsPage implements OnInit {
   isFavorite = false;
   personId = null;
  
-  constructor(private activatedRoute: ActivatedRoute, private api: ApiService, private emailComposer: EmailComposer, private favoriteService: FavoriteService) { }
+  constructor(private activatedRoute: ActivatedRoute, private api: ApiService, private emailComposer: EmailComposer) { }
 
   ngOnInit() {
     let id = this.activatedRoute.snapshot.paramMap.get('id');
