@@ -15,13 +15,23 @@ export class FavoriteService {
     return this.storage.get(STORAGE_KEY);
   }
 
-  getAllFavoritePlanets() {
+  getAllFavoritePeople() {
     return this.storage.get(STORAGE_KEY);
   }
 
+  getAllFavoritePlanets() {
+    return this.storage.get(STORAGE_KEY);
+  }
+  
   isFavorite(filmId) {
     return this.getAllFavoriteFilms().then(result => {
       return result && result.indexOf(filmId) !== -1;
+    });
+  }
+
+  isFavorite2(personId) {
+    return this.getAllFavoritePlanets().then(result => {
+      return result && result.indexOf(personId) !== -1;
     });
   }
 
@@ -35,6 +45,14 @@ export class FavoriteService {
     return this.getAllFavoriteFilms().then(result => {
       result = result || [];
       result.push(filmId);
+      return this.storage.set(STORAGE_KEY, result);
+    });
+  }
+
+  favoritePerson(personId) {
+    return this.getAllFavoritePeople().then(result => {
+      result = result || [];
+      result.push(personId);
       return this.storage.set(STORAGE_KEY, result);
     });
   }
@@ -54,6 +72,26 @@ export class FavoriteService {
         result.splice(index, 1);
         return this.storage.set(STORAGE_KEY, result);
       }
-    })
+    });
+  }
+
+  unfavoritePeople(personId) {
+    return this.getAllFavoriteFilms().then(result => {
+      if (result) {
+        var index = result.indexOf(personId);
+        result.splice(index, 1);
+        return this.storage.set(STORAGE_KEY, result);
+      }
+    });
+  }
+
+  unfavoritePlanet(planetId) {
+    return this.getAllFavoritePlanets().then(result => {
+      if (result) {
+        var index = result.indexOf(planetId);
+        result.splice(index, 1);
+        return this.storage.set(STORAGE_KEY, result);
+      }
+    });
   }
 }

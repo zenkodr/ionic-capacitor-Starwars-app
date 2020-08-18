@@ -14,16 +14,32 @@ import { FavoriteService } from 'src/app/services/favorite.service';
 export class PersonDetailsPage implements OnInit {
 
   person: any;
-  isFavorite = false;
+  isFavorite2 = false;
   personId = null;
  
-  constructor(private activatedRoute: ActivatedRoute, private api: ApiService, private emailComposer: EmailComposer) { }
-
+  constructor(private activatedRoute: ActivatedRoute, private api: ApiService,
+    private emailComposer: EmailComposer, private favoriteService: FavoriteService) { }
+ 
   ngOnInit() {
-    let id = this.activatedRoute.snapshot.paramMap.get('id');
-    this.api.getPerson(id).subscribe(res => {
+    this.personId = this.activatedRoute.snapshot.paramMap.get('id');
+    this.api.getPlanet(this.personId).subscribe(res => {
       this.person = res;
-      console.log(res);
+    });
+
+    this.favoriteService.isFavorite1(this.personId).then(isFav => {
+      this.isFavorite2 = isFav;
+    });
+  }
+
+  favoritePerson() {
+    this.favoriteService.favoritePerson(this.personId).then(() => {
+      this.isFavorite2 = true;
+    });
+  }
+
+  unfavoritePerson() {
+    this.favoriteService.unfavoriteFilm(this.personId).then(() => {
+      this.isFavorite2 = false;
     });
   }
   
