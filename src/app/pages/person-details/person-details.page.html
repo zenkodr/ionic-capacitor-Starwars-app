@@ -4,7 +4,7 @@
     <ion-buttons slot="start" defaultHref="/tabs/people">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>{{ person?.title }}</ion-title>
+    <ion-title>{{ person?.name }}</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="unfavoritePerson()" *ngIf="isFavorite1">
         <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
@@ -17,22 +17,38 @@
 </ion-header>
  
 <ion-content padding>
+ 
   <ion-card *ngIf="person" class="person-card">
-  <ion-item class="person-card">
+
+  <ion-item class="person-info" lines="none">
     <ion-icon name="transgender-outline" slot="start"></ion-icon>
     Gender: {{ person.gender }}
   </ion-item>
 
-    <ion-item class="person-info" lines="none">
-      <ion-icon name="eye-outline" slot="start"></ion-icon>
-      Eye Color: {{ person.eye_color }}
-    </ion-item> 
+  <ion-item class="person-card" lines="none">
+    <ion-icon name="eye-outline" slot="start"></ion-icon>
+    Eye Color: {{ person.eye_color }}
+  </ion-item> 
 
-    <ion-item class="person-info1" lines="none">
+  <ion-item class="person-info" lines="none">
+    <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+    Height: {{ person.height }}
+  </ion-item>
+
+  <ion-item class="person-card" lines="none">
+    <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+    Mass: {{ person.mass }}
+  </ion-item>
+
+  <ion-item class="person-info" lines="none">
+    <ion-icon name="person-circle-outline" slot="start"></ion-icon>
+    Skin Color: {{ person.skin_color }}
+  </ion-item>
+  
+    <ion-item class="person-card" lines="none">
       <ion-icon name="walk-outline" slot="start"></ion-icon>
       Year Born: {{ person.birth_year }}
     </ion-item>
-
 
 </ion-card>
 

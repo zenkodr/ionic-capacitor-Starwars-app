@@ -1,9 +1,10 @@
+<!--referred to https://github.com/herbae/starwarsapp, for some of the code on this page, but later altered it. Also referred to tutorials from https://ionicacademy.com/ionic-crash-course/-->
 <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start" defaultHref="/tabs/planets">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>{{ planet?.title }}</ion-title>
+    <ion-title>{{ planet?.name }}</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="unfavoritePlanet()" *ngIf="isFavorite2">
         <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
@@ -14,26 +15,43 @@
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
-
-<ion-content padding>
-  <ion-card *ngIf="planet" class="planet-card">
-    <ion-item class="planet-card" lines="none">
-      <ion-icon name="cloudy-night-outline" slot="start"></ion-icon>
-      Climate for {{ planet.name }}: {{ planet.climate }}
-    </ion-item> 
-
-    <ion-item class="planet-info" lines="none">
-      <ion-icon name="planet" slot="start"></ion-icon>
-      Rotation Period: {{ planet.rotation_period }}
-    </ion-item> 
-     
-    <ion-item class="planet-info1" lines="none">
-      <ion-icon name="people-outline" slot="start"></ion-icon>
-      Population: {{ planet.population }}
-    </ion-item>
-  </ion-card>
  
+<ion-content padding>
+ 
+  <ion-card *ngIf="planet" class="planet-card">
+
+  <ion-item class="planet-info" lines="none">
+    <ion-icon name="cloudy-night-outline" slot="start"></ion-icon>
+    Climate for {{ planet.name }}: {{ planet.climate }}
+  </ion-item>
+
+  <ion-item class="planet-card" lines="none">
+    <ion-icon name="planet" slot="start"></ion-icon>
+    Rotation Period: {{ planet.rotation_period }}
+  </ion-item> 
+
+  <ion-item class="planet-info" lines="none">
+    <ion-icon name="people-outline" slot="start"></ion-icon>
+    Population: {{ planet.population }}
+  </ion-item>
+
+  <ion-item class="planet-card" lines="none">
+    <ion-icon name="planet" slot="start"></ion-icon>
+    Orbital Period: {{ planet.orbital_period }}
+  </ion-item>
+  
+  <ion-item class="planet-card" lines="none">
+    <ion-icon name="calculator-outline" slot="start"></ion-icon>
+    Diameter: {{ planet.diameter }}
+  </ion-item>
+  
+  <ion-item class="planet-card" lines="none">
+    <ion-icon name="planet" slot="start"></ion-icon>
+    Gravity: {{ planet.gravity }}
+  </ion-item> 
+
+</ion-card>
+
 <ion-button expand="full" (click)="sharePlanet()">Share by Email</ion-button>
 
-</ion-content>
+</ion-content> 
