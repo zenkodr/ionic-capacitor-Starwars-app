@@ -22,7 +22,7 @@ export class PersonDetailsPage implements OnInit {
  
   ngOnInit() {
     this.personId = this.activatedRoute.snapshot.paramMap.get('id');
-    this.api.getPlanet(this.personId).subscribe(res => {
+    this.api.getPerson(this.personId).subscribe(res => {
       this.person = res;
     });
 
