@@ -14,7 +14,7 @@ import { FavoriteService } from 'src/app/services/favorite.service';
 export class PersonDetailsPage implements OnInit {
 
   person: any;
-  isFavorite2 = false;
+  isFavorite1 = false;
   personId = null;
  
   constructor(private activatedRoute: ActivatedRoute, private api: ApiService,
@@ -27,19 +27,19 @@ export class PersonDetailsPage implements OnInit {
     });
 
     this.favoriteService.isFavorite1(this.personId).then(isFav => {
-      this.isFavorite2 = isFav;
+      this.isFavorite1 = isFav;
     });
   }
 
   favoritePerson() {
     this.favoriteService.favoritePerson(this.personId).then(() => {
-      this.isFavorite2 = true;
+      this.isFavorite1 = true;
     });
   }
 
   unfavoritePerson() {
     this.favoriteService.unfavoriteFilm(this.personId).then(() => {
-      this.isFavorite2 = false;
+      this.isFavorite1 = false;
     });
   }
   

@@ -12,7 +12,7 @@ import { FavoriteService } from 'src/app/services/favorite.service';
 export class PlanetDetailsPage implements OnInit {
 
   planet: any;
-  isFavorite1 = false;
+  isFavorite2 = false;
   planetId = null;
  
   constructor(private activatedRoute: ActivatedRoute, private api: ApiService,
@@ -25,19 +25,19 @@ export class PlanetDetailsPage implements OnInit {
     });
 
     this.favoriteService.isFavorite1(this.planetId).then(isFav => {
-      this.isFavorite1 = isFav;
+      this.isFavorite2 = isFav;
     });
   }
 
   favoritePlanet() {
     this.favoriteService.favoritePlanet(this.planetId).then(() => {
-      this.isFavorite1 = true;
+      this.isFavorite2 = true;
     });
   }
 
   unfavoritePlanet() {
     this.favoriteService.unfavoriteFilm(this.planetId).then(() => {
-      this.isFavorite1 = false;
+      this.isFavorite2 = false;
     });
   }
   

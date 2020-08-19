@@ -1,21 +1,21 @@
 <!--referred to https://github.com/herbae/starwarsapp, for some of the code on this page, but later altered it. Also referred to tutorials from https://ionicacademy.com/ionic-crash-course/-->
 <ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button defaultHref="/tabs/people"></ion-back-button>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" defaultHref="/tabs/people">
+      <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>{{ planet?.title }}</ion-title>
+    <ion-title>{{ person?.title }}</ion-title>
     <ion-buttons slot="end">
-      <ion-button (click)="unfavoritePerson()" *ngIf="isFavorite2">
+      <ion-button (click)="unfavoritePerson()" *ngIf="isFavorite1">
         <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
       </ion-button>
-      <ion-button (click)="favoritePerson()" *ngIf="!isFavorite2">
-        <ion-icon name="star-outline" slot="icon-only"></ion-icon>
+      <ion-button (click)="favoritePerson()" *ngIf="!isFavorite1">
+        <ion-icon name="star-outline" slot="icon-only" color="secondary"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
-
+ 
 <ion-content padding>
   <ion-card *ngIf="person" class="person-card">
   <ion-item class="person-card">

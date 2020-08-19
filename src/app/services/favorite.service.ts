@@ -29,13 +29,13 @@ export class FavoriteService {
     });
   }
 
-  isFavorite2(personId) {
+  isFavorite1(personId) {
     return this.getAllFavoritePlanets().then(result => {
       return result && result.indexOf(personId) !== -1;
     });
   }
 
-  isFavorite1(planetId) {
+  isFavorite2(planetId) {
     return this.getAllFavoritePlanets().then(result => {
       return result && result.indexOf(planetId) !== -1;
     });
