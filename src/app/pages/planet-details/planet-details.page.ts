@@ -44,8 +44,8 @@ export class PlanetDetailsPage implements OnInit {
   sharePlanet() {
     let email = {
       to: "",
-      subject: `I love this planet: ${this.planet.title}`,
-      body: `Do you like it? <br><br>"${this.planet.opening_crawl}"`,
+      subject: `I like this planet!: ${this.planet.name}`,
+      body: `What do you think? <br><br>`,
       isHtml: true
     };
 

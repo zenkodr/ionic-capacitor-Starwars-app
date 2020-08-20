@@ -45,7 +45,7 @@ export class FilmDetailsPage implements OnInit {
     let email = {
       to: "",
       subject: `I love this film: ${this.film.title}`,
-      body: `Do you like it? We should watch it some time. <br><br>"${this.film.opening_crawl}"`,
+      body: `Do you like it? <br><br>"${this.film.opening_crawl}"`,
       isHtml: true
     };
 
