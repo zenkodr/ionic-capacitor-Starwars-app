@@ -1,0 +1,72 @@
+<!--referred to https://github.com/herbae/starwarsapp, for some of the code on this page, but later altered it. Also referred to tutorials from https://ionicacademy.com/ionic-crash-course/-->
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start" defaultHref="/tabs/starships">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ starship?.name }}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="unfavoriteStarship()" *ngIf="isFavorite3">
+        <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
+      </ion-button>
+      <ion-button (click)="favoriteStarship()" *ngIf="!isFavorite3">
+        <ion-icon name="star-outline" slot="icon-only" color="secondary"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content padding>
+ 
+  <ion-card *ngIf="starship" class="starship-card">
+
+    <ion-item class="starship-info" lines="none">
+      <ion-icon name="star-half-outline" slot="start"></ion-icon>
+      Model: {{ starship.model }}
+    </ion-item>
+  
+    <ion-item class="starship-card" lines="none">
+      <ion-icon name="calculator-outline" slot="start"></ion-icon>
+      Consumables: {{ starship.consumables }}
+    </ion-item> 
+  
+    <ion-item class="starship-info" lines="none">
+      <ion-icon name="people-outline" slot="start"></ion-icon>
+      Passengers: {{ starship.passengers }}
+    </ion-item>
+  
+    <ion-item class="starship-card" lines="none">
+      <ion-icon name="calculator-outline" slot="start"></ion-icon>
+      Maximum Atmospheric Speed: {{ starship.max_atmosphering_speed }}
+    </ion-item>
+    
+    <ion-item class="starship-info" lines="none">
+      <ion-icon name="calculator-outline" slot="start"></ion-icon>
+      Cargo Capacity: {{ starship.cargo_capacity }}
+    </ion-item>
+    
+    <ion-item class="starship-card" lines="none">
+      <ion-icon name="star-half-outline" slot="start"></ion-icon>
+      Class: {{ starship.starship_class }}
+    </ion-item> 
+
+    <ion-item class="starship-card" lines="none">
+      <ion-icon name="calculator-outline" slot="start"></ion-icon>
+      Length: {{ starship.length }}
+    </ion-item>
+    
+    <ion-item class="starship-info" lines="none">
+      <ion-icon name="people-outline" slot="start"></ion-icon>
+      Crew {{ starship.crew }}
+    </ion-item> 
+
+    <ion-item class="starship-card" lines="none">
+      <ion-icon name="calculator-outline" slot="start"></ion-icon>
+      Cost in Credits {{ starship.cost_in_credits }}
+    </ion-item> 
+  
+  </ion-card>
+
+<ion-button expand="full" (click)="shareStarship()">Share by Email</ion-button>
+
+</ion-content> 

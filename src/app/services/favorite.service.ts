@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
 
-const STORAGE_KEY  = 'favoriteFilms';'favoritePlanets';
+const STORAGE_KEY  = 'favoriteFilms';'favoritePlanets';'favoritePeople'; 'favoriteStarships';
 
 @Injectable({
   providedIn: 'root'
@@ -22,6 +22,10 @@ export class FavoriteService {
   getAllFavoritePlanets() {
     return this.storage.get(STORAGE_KEY);
   }
+
+  getAllFavoriteStarships() {
+    return this.storage.get(STORAGE_KEY);
+  }
   
   isFavorite(filmId) {
     return this.getAllFavoriteFilms().then(result => {
@@ -38,6 +42,12 @@ export class FavoriteService {
   isFavorite2(planetId) {
     return this.getAllFavoritePlanets().then(result => {
       return result && result.indexOf(planetId) !== -1;
+    });
+  }
+
+  isFavorite3(starshipId) {
+    return this.getAllFavoriteStarships().then(result => {
+      return result && result.indexOf(starshipId) !== -1;
     });
   }
 
@@ -61,6 +71,14 @@ export class FavoriteService {
     return this.getAllFavoritePlanets().then(result => {
       result = result || [];
       result.push(planetId);
+      return this.storage.set(STORAGE_KEY, result);
+    });
+  }
+
+  favoriteStarship(starshipId) {
+    return this.getAllFavoriteStarships().then(result => {
+      result = result || [];
+      result.push(starshipId);
       return this.storage.set(STORAGE_KEY, result);
     });
   }
@@ -89,6 +107,16 @@ export class FavoriteService {
     return this.getAllFavoritePlanets().then(result => {
       if (result) {
         var index = result.indexOf(planetId);
+        result.splice(index, 1);
+        return this.storage.set(STORAGE_KEY, result);
+      }
+    });
+  }
+
+  unfavoriteStarship(starshipId) {
+    return this.getAllFavoriteStarships().then(result => {
+      if (result) {
+        var index = result.indexOf(starshipId);
         result.splice(index, 1);
         return this.storage.set(STORAGE_KEY, result);
       }

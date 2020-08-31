@@ -24,6 +24,15 @@ export class ApiService {
     return this.http.get(`https://swapi.dev/api/planets/${id}`);
   }
 
+  getStarships() {
+    return this.http.get('https://swapi.dev/api/starships');
+  }
+ 
+  getStarship(id) {
+    return this.http.get(`https://swapi.dev/api/starships/${id}`);
+  }
+
+
   //referred to code below from https://github.com/herbae/starwarsapp, for some of the code on this page
   
   getPeople() {

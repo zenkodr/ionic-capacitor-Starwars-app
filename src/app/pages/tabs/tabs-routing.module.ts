@@ -27,6 +27,19 @@ const routes: Routes = [
         ]
       },
       {
+        path: 'starships',
+        children: [
+          {
+            path: '',
+            loadChildren: () => import('../starships/starships.module').then( m => m.StarshipsPageModule)
+          },
+          {
+            path: ':id',
+            loadChildren: () => import('../starship-details/starship-details.module').then( m => m.StarshipDetailsPageModule)
+          }
+        ]
+      },
+      {
         path: 'people',
         children: [
           {
