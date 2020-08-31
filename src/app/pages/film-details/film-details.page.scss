@@ -1,9 +1,15 @@
 .movie-card {
     background: #545454;
-    border: 1px solid var(--ion-color-secondary);
+    border: 1px solid #990099;
 }
+
 .movie-info {
     --background: #4a4a4a;
 }
 
 ion-title {--color: #ffcc00;}
+
+ion-button {
+    --background: #990099;
+}
+
