@@ -16,24 +16,27 @@
 </ion-header>
  
 <ion-content padding>
- 
-  <ion-card *ngIf="film" class="movie-info">
-    <ion-card-header>Episode {{ film.episode_id }}: {{ film.title }}</ion-card-header>
-    <ion-card-content>
-      {{ film.opening_crawl }}
-    </ion-card-content>
- 
+
+    <ion-card *ngIf="film" class="movie-card">
+    
     <ion-item class="movie-card" lines="none">
-      <ion-icon name="film" slot="start"></ion-icon>
-      <strong>Director</strong>: {{ film.director }}
+      <ion-icon name="film-outline" slot="start"></ion-icon>
+      <p><strong>Story:</strong><br><br>{{ film.opening_crawl }}</p>
     </ion-item>
  
-    <ion-item class="movie-info" lines="none">
-      <ion-icon name="calendar" classslot="start"></ion-icon>
-      Release Date: {{ film.release_date | date }}
-    </ion-item>
+  <ion-item class="movie-info" lines="none">
+    <ion-icon name="film-outline" slot="start"></ion-icon>
+    <p><strong>Director:</strong><br><br>{{ film.director }}</p>
+  </ion-item>
+ 
+  <ion-item class="movie-card" lines="none">
+    <ion-icon name="calendar" slot="start"></ion-icon>
+    <p><strong>Release Date:</strong><br><br>{{ film.release_date | date }}</p>
+  </ion-item>
   </ion-card>
- 
-  <ion-button expand="full" class="email" (click)="shareFilm()">Share by Email</ion-button>
+ <br><br><br><br>
+  <ion-button expand="full" class="email" (click)="shareFilm()">Share by Email
+
+  </ion-button>
  
 </ion-content>
