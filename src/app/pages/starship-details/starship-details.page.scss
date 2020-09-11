@@ -1,15 +1,13 @@
-.starship-card {
-    background: #545454;
-    border: 1px solid var(--ion-color-secondary);
+.starship-card {    
+    --border: 1px solid var(--ion-color-secondary);
 }
 
 .starship-info {
     --background: #4a4a4a;
 }
 
-.starship-info1 {
-    background: #545454;
-}
-
 ion-title {--color: #ffcc00;}
 
+ion-button {
+    --background: #990099;
+}

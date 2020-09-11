@@ -1,14 +1,9 @@
-.planet-card {
-    background: #545454;
-    border: 1px solid var(--ion-color-secondary);
+.planet-card {    
+    --border: 1px solid var(--ion-color-secondary);
 }
 
 .planet-info {
     --background: #4a4a4a;
-}
-
-.planet-info1 {
-    background: #545454;
 }
 
 ion-title {--color: #ffcc00;}
