@@ -34,3 +34,6 @@ npm-debug.log*
 
 #google-services
 google-services.json
+
+#whitesource
+/.whitesources
