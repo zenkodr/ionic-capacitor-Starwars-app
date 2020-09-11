@@ -19,17 +19,17 @@
 
     <ion-card *ngIf="film" class="movie-card">
     
-    <ion-item class="movie-card" lines="none">
+    <ion-item class="movie-info" lines="none">
       <ion-icon name="film-outline" slot="start"></ion-icon>
       <p><strong>Story:</strong><br><br>{{ film.opening_crawl }}</p>
     </ion-item>
  
-    <ion-item class="movie-info" lines="none">
+    <ion-item class="movie-card" lines="none">
       <ion-icon name="film-outline" slot="start"></ion-icon>
       <p><strong>Director:</strong><br><br>{{ film.director }}</p>
     </ion-item>
  
-    <ion-item class="movie-card" lines="none">
+    <ion-item class="movie-info" lines="none">
       <ion-icon name="calendar" slot="start"></ion-icon>
       <p><strong>Release Date:</strong><br><br>{{ film.release_date | date }}</p>
     </ion-item>

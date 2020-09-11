@@ -1,6 +1,5 @@
-.movie-card {
-    background: #545454;
-    border: 1px solid #990099;
+.movie-card {    
+    --border: 1px solid var(--ion-color-secondary);
 }
 
 .movie-info {
