@@ -1,5 +1,3 @@
-
-
 <!--referred to https://github.com/herbae/starwarsapp, for some of the code on this page, but later altered it. Also referred to tutorials from https://ionicacademy.com/ionic-crash-course/-->
 <ion-header>
   <ion-toolbar color="primary">
@@ -22,42 +20,44 @@
  
   <ion-card *ngIf="person" class="person-card">
 
-    <ion-item class="person-info" lines="none">
+    <ion-item class="person-card" lines="none">
       <ion-icon name="transgender-outline" slot="start"></ion-icon>
       <strong>Gender:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ person.gender }}
     </ion-item>
 
-    <ion-item class="person-card" lines="none">
+    <ion-item class="person-info" lines="none">
       <ion-icon name="color-filter-outline" slot="start"></ion-icon>
       <strong>Eye Color:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ person.eye_color }}
     </ion-item>
 
-    <ion-item class="person-info" lines="none">
+    <ion-item class="person-card" lines="none">
       <ion-icon name="color-filter-outline" slot="start"></ion-icon>
       <strong>Hair Color:</strong>&nbsp;&nbsp;&nbsp;&nbsp;{{ person.hair_color }}
     </ion-item>
 
-    <ion-item class="person-card" lines="none">
+    <ion-item class="person-info" lines="none">
       <ion-icon name="color-filter-outline" slot="start"></ion-icon>
       <strong>Skin Color:</strong>&nbsp;&nbsp;&nbsp;&nbsp;{{ person.skin_color }}
     </ion-item> 
- 
-    <ion-item class="person-info" lines="none">
+  
+    <ion-item class="person-card" lines="none">
       <ion-icon name="person-circle-outline" slot="start"></ion-icon>
       <strong>Height:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ person.height }}
     </ion-item>
  
-    <ion-item class="person-card" lines="none">
+  
+    <ion-item class="person-info" lines="none">
       <ion-icon name="person-circle-outline" slot="start"></ion-icon>
       <strong>Mass:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ person.mass }}
     </ion-item>
 
-    <ion-item class="person-info" lines="none">
+    <ion-item class="person-card" lines="none">
       <ion-icon name="walk-outline" slot="start"></ion-icon>
       <strong>Birth Year:</strong>&nbsp;&nbsp;&nbsp;&nbsp;{{ person.birth_year }}
     </ion-item>
+
 </ion-card>
 <br><br><br><br>
-  <ion-button expand="full" class="email" (click)="shareFilm()">Share by Email</ion-button>
- 
-</ion-content>
+<ion-button expand="full" (click)="sharePlanet()">Share by Email</ion-button>
+
+</ion-content> 
