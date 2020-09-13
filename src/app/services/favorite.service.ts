@@ -93,7 +93,7 @@ export class FavoriteService {
     });
   }
 
-  unfavoritePeople(personId) {
+  unfavoritePerson(personId) {
     return this.getAllFavoriteFilms().then(result => {
       if (result) {
         var index = result.indexOf(personId);

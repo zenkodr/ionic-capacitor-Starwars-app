@@ -24,7 +24,7 @@ export class PlanetDetailsPage implements OnInit {
       this.planet = res;
     });
 
-    this.favoriteService.isFavorite1(this.planetId).then(isFav => {
+    this.favoriteService.isFavorite2(this.planetId).then(isFav => {
       this.isFavorite2 = isFav;
     });
   }
@@ -36,7 +36,7 @@ export class PlanetDetailsPage implements OnInit {
   }
 
   unfavoritePlanet() {
-    this.favoriteService.unfavoriteFilm(this.planetId).then(() => {
+    this.favoriteService.unfavoritePlanet(this.planetId).then(() => {
       this.isFavorite2 = false;
     });
   }

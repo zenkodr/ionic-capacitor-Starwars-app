@@ -1,9 +1,7 @@
-// referred to https://github.com/herbae/starwarsapp, for some of the code on this page, but later altered it. Also referred to tutorials from https://ionicacademy.com/ionic-crash-course/
-
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { ApiService } from 'src/app/services/api.service';
+import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { FavoriteService } from 'src/app/services/favorite.service';
 
 @Component({
@@ -38,7 +36,7 @@ export class PersonDetailsPage implements OnInit {
   }
 
   unfavoritePerson() {
-    this.favoriteService.unfavoriteFilm(this.personId).then(() => {
+    this.favoriteService.unfavoritePerson(this.personId).then(() => {
       this.isFavorite1 = false;
     });
   }
@@ -46,7 +44,7 @@ export class PersonDetailsPage implements OnInit {
   sharePerson() {
     let email = {
       to: "",
-      subject: `Cool!: ${this.person.name}`,
+      subject: `This person is cool!: ${this.person.name}`,
       body: `What do you think? <br><br>`,
       isHtml: true
     };
