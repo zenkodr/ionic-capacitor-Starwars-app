@@ -4,7 +4,7 @@
     <ion-buttons slot="start" defaultHref="/tabs/people">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>{{ people?.name }}</ion-title>
+    <ion-title>{{ person?.name }}</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="unfavoritePerson()" *ngIf="isFavorite1">
         <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
@@ -22,38 +22,137 @@
 
   <ion-item class="person-card" lines="none">
     <ion-icon name="transgender-outline" slot="start"></ion-icon>
-    Gender:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ person.gender }}
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4 col-sm>
+          <div>Gender:</div>
+        </ion-col>
+        
+        <ion-col col-3 col-sm>
+          <div>{{ person.gender }}</div>
+        </ion-col>
+
+        <ion-col col-12 col-sm col-12>
+          <div>{{ test }}</div>
+        </ion-col>     
+      </ion-row>
+    </ion-grid>
   </ion-item>
 
-  <ion-item class="planet-info" lines="none">
+  <ion-item class="person-info" lines="none">
     <ion-icon name="color-filter-outline" slot="start"></ion-icon>
-      Eye Color:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ person.eye_color }}
-  </ion-item> 
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4 col-sm>
+          <div>Eye Color:</div>
+        </ion-col>
+        
+        <ion-col col-3 col-sm>
+          <div>{{ person.eye_color }}</div>
+        </ion-col>
 
-  <ion-item class="planet-card" lines="none">
-    <ion-icon name="color-filter-outline" slot="start"></ion-icon>
-      Hair Color:&nbsp;&nbsp;&nbsp;&nbsp;{{ person.hair_color }}
+        <ion-col col-12 col-sm col-12>
+          <div>{{ test }}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-item>
 
-  <ion-item class="planet-info" lines="none">
+  <ion-item class="person-card" lines="none">
     <ion-icon name="color-filter-outline" slot="start"></ion-icon>
-      Skin Color:&nbsp;&nbsp;&nbsp;&nbsp;{{ person.skin_color }}
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4 col-sm>
+          <div>Hair Color:</div>
+        </ion-col>
+        
+        <ion-col col-3 col-sm>
+          <div>{{ person.hair_color }}</div>
+        </ion-col>
+
+        <ion-col col-12 col-sm col-12>
+          <div>{{ test }}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+
+  <ion-item class="person-info" lines="none">
+    <ion-icon name="color-filter-outline" slot="start"></ion-icon>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4 col-sm>
+          <div>Skin Color:</div>
+        </ion-col>
+        
+        <ion-col col-3 col-sm>
+          <div>{{ person.skin_color }}</div>
+        </ion-col>
+
+        <ion-col col-12 col-sm col-12>
+          <div>{{ test }}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-item>
   
-  <ion-item class="planet-card" lines="none">
-    <ion-icon name="walk-outline" slot="start"></ion-icon>
-      Birth Year:&nbsp;&nbsp;&nbsp;&nbsp;{{ person.birth_year }}
+  <ion-item class="person-card" lines="none">
+    <ion-icon name="color-filter-outline" slot="start"></ion-icon>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4 col-sm>
+          <div>Year of Birth:</div>
+        </ion-col>
+        
+        <ion-col col-3 col-sm>
+          <div>{{ person.birth_year }}</div>
+        </ion-col>
+
+        <ion-col col-12 col-sm col-12>
+          <div>{{ test }}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-item>
 
-  <ion-item class="planet-card" lines="none">
-    <ion-icon name="person-circle-outline" slot="start"></ion-icon>
-    Height:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ person.height }}
+  <ion-item class="person-info" lines="none">
+    <ion-icon name="color-filter-outline" slot="start"></ion-icon>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4 col-sm>
+          <div>Height:</div>
+        </ion-col>
+        
+        <ion-col col-3 col-sm>
+          <div>{{ person.height }}</div>
+        </ion-col>
+        
+        <ion-col col-12 col-sm col-12>
+          <div>{{ test }}</div>
+        </ion-col>     
+      </ion-row>
+    </ion-grid>
   </ion-item>
   
-  <ion-item class="planet-info" lines="none">
-    <ion-icon name="person-circle-outline" slot="start"></ion-icon>
-    <strong>Mass:</strong>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ person.mass }}
-  </ion-item> 
+  <ion-item class="person-card" lines="none">
+    <ion-icon name="color-filter-outline" slot="start"></ion-icon>
+    <ion-grid>
+      <ion-row>
+      
+        <ion-col col-4 col-sm>
+          <div>Mass:</div>
+        </ion-col>
+        
+        <ion-col col-3 col-sm>
+          <div>{{ person.mass }}</div>
+        </ion-col>
+
+        <ion-col col-12 col-sm col-12>
+          <div>{{ test }}</div>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-item>
 </ion-card>
 <br><br><br><br>
 <ion-button expand="full" (click)="sharePerson()">Share by Email</ion-button>
