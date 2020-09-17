@@ -25,11 +25,11 @@
     <ion-grid>
       <ion-row>
 
-        <ion-col>
+        <ion-col col-12 col-sm>
           <div>HD Rating:</div>
         </ion-col>
         
-        <ion-col>
+        <ion-col col-12 col-sm>
           <div>{{ starship.hyperdrive_rating}}</div>
         </ion-col>
        
@@ -41,11 +41,11 @@
     <ion-icon name="calculator-outline" slot="start"></ion-icon>
     <ion-grid>
       <ion-row>
-        <ion-col>
+        <ion-col col-12 col-sm>
           <div>Consumables:</div>
         </ion-col>
         
-        <ion-col>
+        <ion-col col-12 col-sm>
           <div>{{ starship.consumables }}</div>
         </ion-col>
       
@@ -57,11 +57,11 @@
     <ion-icon name="people-outline" slot="start"></ion-icon>
     <ion-grid>
       <ion-row>
-        <ion-col>
+        <ion-col col-12 col-sm>
           <div>Passengers:</div>
         </ion-col>
         
-        <ion-col>
+        <ion-col col-12 col-sm>
           <div>{{ starship.passengers }}</div>
         </ion-col>
        
@@ -73,11 +73,11 @@
     <ion-icon name="calculator-outline" slot="start"></ion-icon>
     <ion-grid>
       <ion-row>
-        <ion-col>
+        <ion-col col-12 col-sm>
           <div>Max Speed:</div>
         </ion-col>
         
-        <ion-col>
+        <ion-col col-12 col-sm>
           <div>{{ starship.max_atmosphering_speed }}</div>
         </ion-col>
        
@@ -89,11 +89,11 @@
     <ion-icon name="calculator-outline" slot="start"></ion-icon>
     <ion-grid>
       <ion-row>
-        <ion-col>
+        <ion-col col-12 col-sm>
           <div>Cargo Capacity:</div>
         </ion-col>
         
-        <ion-col>
+        <ion-col col-12 col-sm>
           <div>{{ starship.cargo_capacity }}</div>
         </ion-col>
        
@@ -105,11 +105,11 @@
     <ion-icon name="star-half-outline" slot="start"></ion-icon>
     <ion-grid>
       <ion-row>
-        <ion-col>
+        <ion-col col-12 col-sm>
           <div>Class:</div>
         </ion-col>
         
-        <ion-col>
+        <ion-col col-12 col-sm>
           <div>{{ starship.starship_class }}</div>
         </ion-col>       
       </ion-row>
@@ -120,11 +120,11 @@
     <ion-icon name="calculator-outline" slot="start"></ion-icon>
     <ion-grid>
       <ion-row>
-        <ion-col>
+        <ion-col col-12 col-sm>
           <div>Cost in Credits:</div>
         </ion-col>
         
-        <ion-col>
+        <ion-col col-12 col-sm>
           <div>{{ starship.cost_in_credits }}</div>
         </ion-col>
        
@@ -136,11 +136,11 @@
     <ion-icon name="calculator-outline" slot="start"></ion-icon>
     <ion-grid>
       <ion-row>
-        <ion-col>
+        <ion-col col-12 col-sm>
           <div>Length:</div>
         </ion-col>
         
-        <ion-col>
+        <ion-col col-12 col-sm>
           <div>{{ starship.length }}</div>
         </ion-col>       
       </ion-row>
@@ -149,6 +149,6 @@
   
 </ion-card>
 <br><br><br><br>
-<ion-button expand="full" (click)="sharePlanet()">Share by Email</ion-button>
+<ion-button expand="full" (click)="shareStarship()">Share by Email</ion-button>
 
 </ion-content> 
