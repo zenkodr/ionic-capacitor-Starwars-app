@@ -1,7 +1,7 @@
 <!--referred to https://github.com/herbae/starwarsapp, for some of the code on this page, but later altered it. Also referred to tutorials from https://ionicacademy.com/ionic-crash-course/-->
 <ion-header>
   <ion-toolbar color="primary">
-    <ion-buttons slot="start" defaultHref="/tabs/planets">
+    <ion-buttons slot="start" defaultHref="/tabs/people">
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title>{{ planet?.name }}</ion-title>
@@ -22,33 +22,101 @@
 
   <ion-item class="planet-card" lines="none">
     <ion-icon name="cloudy-night-outline" slot="start"></ion-icon>
-    Climate: &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ planet.climate }}
+    <ion-grid>
+      <ion-row>
+
+        <ion-col col-8>
+          <div>Rotation:</div>
+        </ion-col>
+        
+        <ion-col>
+          <div>{{ planet.rotation_period }}</div>
+        </ion-col>
+       
+      </ion-row>
+    </ion-grid>
   </ion-item>
 
   <ion-item class="planet-info" lines="none">
-    <ion-icon name="planet" slot="start"></ion-icon>
-    Rotation Period:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ planet.rotation_period }}
-  </ion-item> 
+    <ion-icon name="cloudy-night-outline" slot="start"></ion-icon>
+    <ion-grid>
+      <ion-row>
+        <ion-col col-8>
+          <div>Climate:</div>
+        </ion-col>
+        
+        <ion-col>
+          <div>{{ planet.climate }}</div>
+        </ion-col>
+      
+      </ion-row>
+    </ion-grid>
+  </ion-item>
 
   <ion-item class="planet-card" lines="none">
     <ion-icon name="people-outline" slot="start"></ion-icon>
-    Population:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ planet.population }}
+    <ion-grid>
+      <ion-row>
+        <ion-col col-8>
+          <div>Population:</div>
+        </ion-col>
+        
+        <ion-col>
+          <div>{{ planet.population }}</div>
+        </ion-col>
+       
+      </ion-row>
+    </ion-grid>
   </ion-item>
 
   <ion-item class="planet-info" lines="none">
     <ion-icon name="planet" slot="start"></ion-icon>
-    Orbital Period:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ planet.orbital_period }}
+    <ion-grid>
+      <ion-row>
+        <ion-col col-8>
+          <div>Orbital Period:</div>
+        </ion-col>
+        
+        <ion-col>
+          <div>{{ planet.orbital_period }}</div>
+        </ion-col>
+       
+      </ion-row>
+    </ion-grid>
   </ion-item>
   
   <ion-item class="planet-card" lines="none">
     <ion-icon name="calculator-outline" slot="start"></ion-icon>
-    Diameter:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ planet.diameter }}
+    <ion-grid>
+      <ion-row>
+        <ion-col col-8>
+          <div>Diameter:</div>
+        </ion-col>
+        
+        <ion-col>
+          <div>{{ planet.diameter }}</div>
+        </ion-col>
+       
+      </ion-row>
+    </ion-grid>
   </ion-item>
-  
+
   <ion-item class="planet-info" lines="none">
     <ion-icon name="planet" slot="start"></ion-icon>
-    Gravity:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{ planet.gravity }}
-  </ion-item> 
+    <ion-grid>
+      <ion-row>
+        <ion-col col-8>
+          <div>Gravity:</div>
+        </ion-col>
+        
+        <ion-col>
+          <div>{{ planet.gravity }}</div>
+        </ion-col>       
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+  
+  
 </ion-card>
 <br><br><br><br>
 <ion-button expand="full" (click)="sharePlanet()">Share by Email</ion-button>
