@@ -4,7 +4,7 @@
     <ion-buttons slot="start" defaultHref="/tabs/people">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>{{ planet?.name }}</ion-title>
+    <ion-title>{{ starship?.name }}</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="unfavoriteStarship()" *ngIf="isFavorite3">
         <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
@@ -42,7 +42,7 @@
     <ion-grid>
       <ion-row>
         <ion-col col-12 col-sm>
-          <div>Consumables:</div>
+          <div>Supplies:</div>
         </ion-col>
         
         <ion-col col-12 col-sm>
