@@ -52,7 +52,7 @@
     </ion-grid>
   </ion-item>
 
-  <ion-item class="planet-info" lines="none">
+  <ion-item class="card" lines="none">
     <ion-icon name="cloudy-night-outline" slot="start"></ion-icon>
     <ion-grid>
       <ion-row>
@@ -83,8 +83,6 @@
       </ion-row>
     </ion-grid>
   </ion-item>
-
-
 
   <ion-item class="planet-card" lines="none">
     <ion-icon name="people-outline" slot="start"></ion-icon>
@@ -152,6 +150,12 @@
   
 </ion-card>
 <br><br><br><br><br>
-<ion-button expand="full" (click)="sharePlanet()">Share by Email</ion-button>
+<ion-button expand="full" (click)="sharePlanet()"><ion-icon name="mail-outline"></ion-icon></ion-button><br>
+
+<ion-button expand="full" color="primary" (click)="ShareFacebook()"><ion-icon name="logo-facebook"></ion-icon></ion-button><br>
+
+<ion-button expand="full" color="secondary" (click)="SendTwitter()"><ion-icon name="logo-twitter"></ion-icon></ion-button><br>
+
+<ion-button expand="full" (click)="SendInstagram()"><ion-icon name="logo-instagram"></ion-icon></ion-button>
 
 </ion-content> 

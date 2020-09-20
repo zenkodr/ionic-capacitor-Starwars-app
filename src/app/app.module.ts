@@ -11,6 +11,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { IonicStorageModule } from '@ionic/storage';
+//Import the Social Sharing plugin 
+import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+
 
 @NgModule({
   declarations: [AppComponent],
@@ -21,7 +24,8 @@ import { IonicStorageModule } from '@ionic/storage';
     StatusBar,
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
-    EmailComposer
+    EmailComposer,
+    SocialSharing
   ],
   bootstrap: [AppComponent]
 })
