@@ -15,6 +15,7 @@ export class PlanetDetailsPage implements OnInit {
   planet: any;
   isFavorite2 = false;
   planetId = null;
+  url = null;
    
   constructor(private activatedRoute: ActivatedRoute, private api: ApiService,
     private emailComposer: EmailComposer, private favoriteService: FavoriteService, private socialSharing: SocialSharing) { }
@@ -54,15 +55,15 @@ export class PlanetDetailsPage implements OnInit {
   }
 
   ShareFacebook(){
-    this.socialSharing.shareViaFacebookWithPasteMessageHint(this.planetId)
+    this.socialSharing.shareViaFacebookWithPasteMessageHint(null, this.url)
   }
 
   SendTwitter(){
-    this.socialSharing.shareViaTwitter(this.planetId)
+    this.socialSharing.shareViaTwitter(null, this.url)
   }
 
   SendInstagram(){
-    this.socialSharing.shareViaInstagram(this.planet.name, this.planetId)
+    this.socialSharing.shareViaInstagram(null, this.url)
   }
  
 }
