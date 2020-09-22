@@ -46,14 +46,66 @@ export class PersonDetailsPage implements OnInit {
   sharePerson() {
     let email = {
       to: "",
-      subject: `This person is cool, what do you think?: ${this.person.name}`,
-      body: `What do you think?<br>
-      
-      Gender:${this.person.gender}<br>Eye Color:${this.person.gender}<br>Hair Color:${this.person.hair_color}<br>Height:${this.person.height}<br>Skin Color:${this.person.skin_color}<br>Birth Year:${this.person.birth_year}<br>Mass:${this.person.mass}`,
+      subject: `This person is cool!: ${this.person.name}`,
+      body: `What do you think?<br>  
+
+      <ion-col col-12 col-sm>
+      Gender:</ion-col><br>
+
+      <ion-col col-12 col-sm>
+      ${this.person.gender}
+      </ion-col><br>
+
+      <ion-col col-12 col-sm>
+      Eye Color:
+      </ion-col>
+
+      <ion-col col-12 col-sm>
+      ${this.person.eye_color}
+      </ion-col><br>
+
+      <ion-col col-12 col-sm>
+      Hair Color:
+      </ion-col><br>
+
+      <ion-col col-12 col-sm>
+      ${this.person.hair_color}
+      </ion-col><br>      
+
+      <ion-col col-12 col-sm>
+      Skin Color:
+      </ion-col><br>
+
+      <ion-col col-12 col-sm>
+      ${this.person.skin_color}
+      </ion-col><br>
+
+      <ion-col col-12 col-sm>
+      <div>Height:</div>
+      </ion-col>
+
+      <ion-col col-12 col-sm>
+      <div>${this.person.height}</div>
+      </ion-col><br>
+
+      <ion-col col-12 col-sm>
+      Date of Birth:
+      </ion-col><br>
+
+      <ion-col col-12 col-sm>
+      ${this.person.birth_year}
+      </ion-col><br>
+
+      <ion-col col-12 col-sm>
+      Mass:
+      </ion-col>
+
+      <ion-col col-12 col-sm>
+      ${this.person.mass}</ion-col>'`,
       isHtml: true
     };
-
+  
     this.emailComposer.open(email);
   }
-
-}
+  
+  }
