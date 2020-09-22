@@ -3,7 +3,6 @@ import { ActivatedRoute } from '@angular/router';
 import { ApiService } from 'src/app/services/api.service';
 import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { FavoriteService } from 'src/app/services/favorite.service';
-import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 
 @Component({
   selector: 'app-planet-details',
@@ -15,10 +14,9 @@ export class PlanetDetailsPage implements OnInit {
   planet: any;
   isFavorite2 = false;
   planetId = null;
-  url = null;
-   
+ 
   constructor(private activatedRoute: ActivatedRoute, private api: ApiService,
-    private emailComposer: EmailComposer, private favoriteService: FavoriteService, private socialSharing: SocialSharing) { }
+    private emailComposer: EmailComposer, private favoriteService: FavoriteService) { }
  
   ngOnInit() {
     this.planetId = this.activatedRoute.snapshot.paramMap.get('id');
@@ -54,16 +52,4 @@ export class PlanetDetailsPage implements OnInit {
     this.emailComposer.open(email);
   }
 
-  ShareFacebook(){
-    this.socialSharing.shareViaFacebookWithPasteMessageHint(null, this.url)
-  }
-
-  SendTwitter(){
-    this.socialSharing.shareViaTwitter(null, this.url)
-  }
-
-  SendInstagram(){
-    this.socialSharing.shareViaInstagram(null, this.url)
-  }
- 
 }
