@@ -12,22 +12,23 @@ import { SocialSharing } from '@ionic-native/social-sharing/ngx';
   styleUrls: ['./person-details.page.scss'],
 })
 export class PersonDetailsPage implements OnInit {
-
-  text: string='This person is cool!'
+  
+  text: string='Check out your favorite characters from Starwars!'
+  imgurl:string= 'https://www.instagram.com/p/B9UdTKighTe/'
+  link: string='https://www.starwars.com/databank'
   person: any;
   isFavorite1 = false;
-  link:string='this.api.getPerson(this.personId)';
   personId = null;
- 
-   
+
+  ShareGeneric(parameter){
+    const url = this.link
+    const text = parameter+'\n'
+    this.socialSharing.share(text, null, url,this.link)
+  }
+    
   constructor(private activatedRoute: ActivatedRoute, private api: ApiService,
     private emailComposer: EmailComposer, private favoriteService: FavoriteService, private socialSharing: SocialSharing) { }
 
-    ShareGeneric(parameter){
-      const url = this.link
-      const text = parameter+'\n'
-      this.socialSharing.share(text, null,this.link)
-    }
     
     ngOnInit() {
       this.personId = this.activatedRoute.snapshot.paramMap.get('id');
@@ -54,19 +55,19 @@ export class PersonDetailsPage implements OnInit {
   }  
   
   ShareFacebook(){
-    this.socialSharing.shareViaFacebookWithPasteMessageHint(this.text, this.link, null /* url */, 'Copy Paste!')
+    this.socialSharing.shareViaFacebookWithPasteMessageHint(this.link, null, 'Copy Paste!')
   }
 
   SendEmail(){
-    this.socialSharing.shareViaEmail(this.text, this.link, null /* url */, ['email@address.com'])
+    this.socialSharing.shareViaEmail(this.link, null, ['email@address.com'])
   }
 
   SendTwitter(){
-    this.socialSharing.shareViaTwitter(this.text, this.link, null /* url */)
+    this.socialSharing.shareViaTwitter(this.link, null)
   }
 
   SendInstagram(){
-    this.socialSharing.shareViaInstagram(this.text, this.link)
+    this.socialSharing.shareViaInstagram(null,this.link)
   }
    
 }
