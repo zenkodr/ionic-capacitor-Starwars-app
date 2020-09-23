@@ -15,16 +15,19 @@ export class PersonDetailsPage implements OnInit {
 
   person: any;
   isFavorite1 = false;
+  link = this.api.getPerson;
   personId = null;
+ 
    
   constructor(private activatedRoute: ActivatedRoute, private api: ApiService,
     private emailComposer: EmailComposer, private favoriteService: FavoriteService, private socialSharing: SocialSharing) { }
     
-  ngOnInit() {
-    this.personId = this.activatedRoute.snapshot.paramMap.get('id');
-    this.api.getPerson(this.personId).subscribe(res => {
-      this.person = res;
-    });
+    ngOnInit() {
+      this.personId = this.activatedRoute.snapshot.paramMap.get('id');
+      this.api.getPerson(this.personId).subscribe(res => {
+        this.person = res;
+      });
+  
 
     this.favoriteService.isFavorite1(this.personId).then(isFav => {
       this.isFavorite1 = isFav;
