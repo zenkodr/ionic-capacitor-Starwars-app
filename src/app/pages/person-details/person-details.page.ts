@@ -5,6 +5,8 @@ import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { FavoriteService } from 'src/app/services/favorite.service';
 // IMPORT SOCIAL SHARING.
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+import { Instagram } from '@ionic-native/instagram/ngx';
+
 
 @Component({
   selector: 'app-person-details',
@@ -13,10 +15,9 @@ import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 })
 export class PersonDetailsPage implements OnInit {
   
-  subject: string='Check out all your favorite Characters from Starwars!'
-  text: string='Check out all your favorite Characters from Stawars!'
-  imgurl:string= 'https://www.instagram.com/starwars.jpg/'
-  link: string='https://www.starwars.com/databank'
+  text: string='Check out the 50 best Star Wars Characters!'
+  imgurl:string='https://media.timeout.com/images/105214873/750/422/image.jpg'
+  link: string='https://www.timeout.com/hong-kong/film/the-50-best-star-wars-characters'
   person: any;
   isFavorite1 = false;
   personId = null;
@@ -24,12 +25,11 @@ export class PersonDetailsPage implements OnInit {
   ShareGeneric(parameter){
     const url = this.link
     const text = parameter+'\n'
-    this.socialSharing.share(this.subject, null, url,this.link)
+    this.socialSharing.share(text, null, url)
   }
     
   constructor(private activatedRoute: ActivatedRoute, private api: ApiService,
-    private emailComposer: EmailComposer, private favoriteService: FavoriteService, private socialSharing: SocialSharing) { }
-
+    private emailComposer: EmailComposer, private favoriteService: FavoriteService, private socialSharing: SocialSharing, private instagram: Instagram) { }
     
     ngOnInit() {
       this.personId = this.activatedRoute.snapshot.paramMap.get('id');
@@ -54,21 +54,21 @@ export class PersonDetailsPage implements OnInit {
       this.isFavorite1 = false;
     });
   }  
-  
-  ShareFacebook(){
-    this.socialSharing.shareViaFacebookWithPasteMessageHint(this.link, this.text, 'Copy Paste!')
-  }
 
   SendEmail(){
-    this.socialSharing.shareViaEmail(this.link, this.subject, ['email@address.com'])
+    this.socialSharing.shareViaEmail(this.link, null /* url */, ['email@address.com'])
+  }
+
+  ShareFacebook(){
+    this.socialSharing.shareViaFacebookWithPasteMessageHint(this.link, null /* url */, 'Copy Paste!')
   }
 
   SendTwitter(){
-    this.socialSharing.shareViaTwitter(this.link, this.text)
+    this.socialSharing.shareViaTwitter(this.link)
   }
 
   SendInstagram(){
-    this.socialSharing.shareViaInstagram(this.text, this.imgurl)
+    this.socialSharing.shareViaInstagram(null, this.imgurl)
   }
-   
+
 }

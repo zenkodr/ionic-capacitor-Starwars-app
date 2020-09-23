@@ -13,6 +13,7 @@ import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { IonicStorageModule } from '@ionic/storage';
 //Import the Social Sharing plugin 
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
+import { Instagram } from '@ionic-native/instagram/ngx';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { SocialSharing } from '@ionic-native/social-sharing/ngx';
     SplashScreen,
     { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     EmailComposer,
-    SocialSharing
+    SocialSharing,
+    Instagram
   ],
   bootstrap: [AppComponent]
 })
