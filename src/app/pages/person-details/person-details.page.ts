@@ -13,8 +13,9 @@ import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 })
 export class PersonDetailsPage implements OnInit {
   
-  text: string='Check out your favorite characters from Starwars!'
-  imgurl:string= 'https://www.instagram.com/p/B9UdTKighTe/'
+  subject: string='Check out all your favorite Characters from Starwars!'
+  text: string='Check out all your favorite Characters from Stawars!'
+  imgurl:string= 'https://www.instagram.com/starwars.jpg/'
   link: string='https://www.starwars.com/databank'
   person: any;
   isFavorite1 = false;
@@ -23,7 +24,7 @@ export class PersonDetailsPage implements OnInit {
   ShareGeneric(parameter){
     const url = this.link
     const text = parameter+'\n'
-    this.socialSharing.share(text, null, url,this.link)
+    this.socialSharing.share(this.subject, null, url,this.link)
   }
     
   constructor(private activatedRoute: ActivatedRoute, private api: ApiService,
@@ -55,19 +56,19 @@ export class PersonDetailsPage implements OnInit {
   }  
   
   ShareFacebook(){
-    this.socialSharing.shareViaFacebookWithPasteMessageHint(this.link, null, 'Copy Paste!')
+    this.socialSharing.shareViaFacebookWithPasteMessageHint(this.link, this.text, 'Copy Paste!')
   }
 
   SendEmail(){
-    this.socialSharing.shareViaEmail(this.link, null, ['email@address.com'])
+    this.socialSharing.shareViaEmail(this.link, this.subject, ['email@address.com'])
   }
 
   SendTwitter(){
-    this.socialSharing.shareViaTwitter(this.link, null)
+    this.socialSharing.shareViaTwitter(this.link, this.text)
   }
 
   SendInstagram(){
-    this.socialSharing.shareViaInstagram(null,this.link)
+    this.socialSharing.shareViaInstagram(this.text, this.imgurl)
   }
    
 }
