@@ -5,8 +5,6 @@ import { EmailComposer } from '@ionic-native/email-composer/ngx';
 import { FavoriteService } from 'src/app/services/favorite.service';
 // IMPORT SOCIAL SHARING.
 import { SocialSharing } from '@ionic-native/social-sharing/ngx';
-import { Instagram } from '@ionic-native/instagram/ngx';
-
 
 @Component({
   selector: 'app-person-details',
@@ -16,8 +14,8 @@ import { Instagram } from '@ionic-native/instagram/ngx';
 export class PersonDetailsPage implements OnInit {
   subject: string='Check out all your favorite Characters from Starwars!'
   text: string='Check out all your favorite Characters from Starwars!'
-  imgurl:string='https://media.timeout.com/images/105214873/750/422/image.jpg'
-  link: string='https://www.timeout.com/hong-kong/film/the-50-best-star-wars-characters'
+  imgurl:string='https://starwarsblog.starwars.com/wp-content/uploads/sites/6/2014/03/Blog_Poster.jpg'
+  link: string='https://www.starwars.com/search?q=characters'
   person: any;
   isFavorite1 = false;
   personId = null;
@@ -30,7 +28,7 @@ export class PersonDetailsPage implements OnInit {
   }
     
   constructor(private activatedRoute: ActivatedRoute, private api: ApiService,
-    private emailComposer: EmailComposer, private favoriteService: FavoriteService, private socialSharing: SocialSharing, private instagram: Instagram) { }
+    private emailComposer: EmailComposer, private favoriteService: FavoriteService, private socialSharing: SocialSharing) { }
     
     ngOnInit() {
       this.personId = this.activatedRoute.snapshot.paramMap.get('id');
@@ -70,7 +68,7 @@ export class PersonDetailsPage implements OnInit {
   }
 
   SendInstagram(){
-    this.socialSharing.shareViaInstagram(this.imgurl, null)
+    this.socialSharing.shareViaInstagram(this.imgurl,null)
   }
 
 }
