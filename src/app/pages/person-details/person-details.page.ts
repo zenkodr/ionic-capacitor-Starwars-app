@@ -14,8 +14,8 @@ import { Instagram } from '@ionic-native/instagram/ngx';
   styleUrls: ['./person-details.page.scss'],
 })
 export class PersonDetailsPage implements OnInit {
-  
-  text: string='Check out the 50 best Star Wars Characters!'
+  subject: string='Check out all your favorite Characters from Starwars!'
+  text: string='Check out all your favorite Characters from Starwars!'
   imgurl:string='https://media.timeout.com/images/105214873/750/422/image.jpg'
   link: string='https://www.timeout.com/hong-kong/film/the-50-best-star-wars-characters'
   person: any;
@@ -25,7 +25,8 @@ export class PersonDetailsPage implements OnInit {
   ShareGeneric(parameter){
     const url = this.link
     const text = parameter+'\n'
-    this.socialSharing.share(text, null, url)
+    //this.socialSharing.share(text, null, url)
+    this.socialSharing.share(this.subject, null, url,this.link)
   }
     
   constructor(private activatedRoute: ActivatedRoute, private api: ApiService,
@@ -56,7 +57,8 @@ export class PersonDetailsPage implements OnInit {
   }  
 
   SendEmail(){
-    this.socialSharing.shareViaEmail(this.link, null /* url */, ['email@address.com'])
+    //this.socialSharing.shareViaEmail(this.link, null /* url */, ['email@address.com'])
+    this.socialSharing.shareViaEmail(this.link, this.subject, ['email@address.com'])
   }
 
   ShareFacebook(){
