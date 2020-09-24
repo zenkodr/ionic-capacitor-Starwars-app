@@ -22,7 +22,6 @@ export class PlanetDetailsPage implements OnInit {
   ShareGeneric(parameter){
     const url = this.link
     const text = parameter+'\n'
-    //this.socialSharing.share(text, null, url)
     this.socialSharing.share(this.subject, null, url,this.link)
   }
   constructor(private activatedRoute: ActivatedRoute, private api: ApiService,
@@ -49,6 +48,10 @@ export class PlanetDetailsPage implements OnInit {
     this.favoriteService.unfavoritePlanet(this.planetId).then(() => {
       this.isFavorite2 = false;
     });
+  }
+
+  SendEmail(){
+    this.socialSharing.shareViaEmail(this.link, this.subject, ['email@address.com'])
   }
   
   ShareFacebook(){

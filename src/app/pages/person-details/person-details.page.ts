@@ -23,7 +23,6 @@ export class PersonDetailsPage implements OnInit {
   ShareGeneric(parameter){
     const url = this.link
     const text = parameter+'\n'
-    //this.socialSharing.share(text, null, url)
     this.socialSharing.share(this.subject, null, url,this.link)
   }
     
@@ -55,7 +54,6 @@ export class PersonDetailsPage implements OnInit {
   }  
 
   SendEmail(){
-    //this.socialSharing.shareViaEmail(this.link, null /* url */, ['email@address.com'])
     this.socialSharing.shareViaEmail(this.link, this.subject, ['email@address.com'])
   }
 
