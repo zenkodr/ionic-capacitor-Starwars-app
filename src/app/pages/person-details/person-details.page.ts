@@ -70,7 +70,7 @@ export class PersonDetailsPage implements OnInit {
   }
 
   SendInstagram(){
-    this.socialSharing.shareViaInstagram(null, this.imgurl)
+    this.socialSharing.shareViaInstagram(this.imgurl, null)
   }
 
 }
