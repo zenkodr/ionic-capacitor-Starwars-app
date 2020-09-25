@@ -53,7 +53,7 @@ export class StarshipDetailsPage implements OnInit {
   SendEmail(){
     this.socialSharing.shareViaEmail(this.link, this.subject, ['email@address.com'])
   }
-  
+
   ShareFacebook(){
     this.socialSharing.shareViaFacebookWithPasteMessageHint(this.link, null /* url */, 'Copy Paste!')
   }
@@ -63,7 +63,7 @@ export class StarshipDetailsPage implements OnInit {
   }
 
   SendInstagram(){
-    this.socialSharing.shareViaInstagram(this.imgurl, null)
+    this.socialSharing.shareViaInstagram(this.imgurl,null)
   }
 
 }
