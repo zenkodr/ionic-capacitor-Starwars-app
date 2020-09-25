@@ -14,7 +14,7 @@ import { SocialSharing } from '@ionic-native/social-sharing/ngx';
 export class PersonDetailsPage implements OnInit {
   subject: string='Check out all your favorite Characters from Starwars!'
   text: string='Check out your favorite Characters from Starwars!'
-  imgurl:string='https://starwarsblog.starwars.com/wp-content/uploads/sites/6/2014/03/Blog_Poster.jpg'
+  imgurl:string='https://lumiere-a.akamaihd.net/v1/images/04-05-16-final-tim-bracket-169_0d313f95.jpeg?region=0%2C0%2C1560%2C878'
   link: string='https://www.starwars.com/search?q=characters'
   person: any;
   isFavorite1 = false;

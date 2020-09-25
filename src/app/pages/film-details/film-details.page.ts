@@ -17,7 +17,7 @@ export class FilmDetailsPage implements OnInit {
   filmId = null;
   subject: string='Check out all your favorite Characters from Starwars!'
   text: string='Check out all your favorite Characters from Starwars!'
-  imgurl:string='https://lumiere-a.akamaihd.net/v1/images/Star-Wars-Return-Jedi-VI-Poster_a10501d2.jpeg?region=12%2C9%2C618%2C982&width=480'
+  imgurl:string='https://starwarsblog.starwars.com/wp-content/uploads/2017/06/25-star-wars-quotes-obi-wan-kenobi-identification-tall.jpg'
   link: string='https://www.starwars.com/films'
 
   ShareGeneric(parameter){
