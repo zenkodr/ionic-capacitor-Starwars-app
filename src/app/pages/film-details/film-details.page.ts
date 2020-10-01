@@ -15,7 +15,7 @@ export class FilmDetailsPage implements OnInit {
   film: any;
   isFavorite = false;
   filmId = null;
-  subject: string='Check out all your favorite Characters from Starwars!'
+  subject: string='Check out all your favorite Starwars films!'
   text: string='Check out all your favorite Characters from Starwars!'
   imgurl:string='https://starwarsblog.starwars.com/wp-content/uploads/2017/06/25-star-wars-quotes-obi-wan-kenobi-identification-tall.jpg'
   link: string='https://www.starwars.com/films'
