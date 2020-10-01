@@ -16,16 +16,17 @@ export class FilmDetailsPage implements OnInit {
   isFavorite = false;
   filmId = null;
   subject: string='Check out all your favorite Starwars films!'
-  text: string='Check out all your favorite Characters from Starwars!'
+  text: string='Check out all your favorite Starwars films!'
   imgurl:string='https://starwarsblog.starwars.com/wp-content/uploads/2017/06/25-star-wars-quotes-obi-wan-kenobi-identification-tall.jpg'
   link: string='https://www.starwars.com/films'
 
   ShareGeneric(parameter){
     const url = this.link
     const text = parameter+'\n'
+    const subject = parameter+'\n'
     this.socialSharing.share(this.subject, null, url,this.link)
   }
- 
+
   constructor(private activatedRoute: ActivatedRoute, private api: ApiService,
     private emailComposer: EmailComposer, private favoriteService: FavoriteService, private socialSharing: SocialSharing) { }
  
@@ -66,7 +67,7 @@ export class FilmDetailsPage implements OnInit {
   }
 
   SendInstagram(){
-    this.socialSharing.shareViaInstagram(this.text, this.imgurl)
+    this.socialSharing.shareViaInstagram(null, this.imgurl)
   }
 
 }

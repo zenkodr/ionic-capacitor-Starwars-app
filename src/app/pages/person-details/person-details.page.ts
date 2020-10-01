@@ -58,15 +58,15 @@ export class PersonDetailsPage implements OnInit {
   }
 
   ShareFacebook(){
-    this.socialSharing.shareViaFacebookWithPasteMessageHint(this.link, null /* url */, 'Copy Paste!')
+    this.socialSharing.shareViaFacebookWithPasteMessageHint(this.link, this.text, null /* url */, 'Copy Paste!')
   }
 
   SendTwitter(){
-    this.socialSharing.shareViaTwitter(this.link)
+    this.socialSharing.shareViaTwitter(this.text, this.imgurl, null /* url */)
   }
-
+  
   SendInstagram(){
-    this.socialSharing.shareViaInstagram(this.imgurl,null)
+    this.socialSharing.shareViaInstagram(this.text, this.imgurl)
   }
 
 }
