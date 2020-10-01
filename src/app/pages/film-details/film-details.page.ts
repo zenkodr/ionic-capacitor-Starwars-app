@@ -66,7 +66,7 @@ export class FilmDetailsPage implements OnInit {
   }
 
   SendInstagram(){
-    this.socialSharing.shareViaInstagram(this.imgurl,null)
+    this.socialSharing.shareViaInstagram(this.text, this.imgurl)
   }
 
 }
