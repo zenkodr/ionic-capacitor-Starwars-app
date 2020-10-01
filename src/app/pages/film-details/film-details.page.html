@@ -45,12 +45,11 @@
       <ion-icon name="calendar" slot="start"></ion-icon>
       {{ film.release_date | date }}
     </ion-item>
-  
- <br><br><br><br>
+  </ion-card>
+</ion-content> 
+ 
  <ion-button expand="full" (click)="SendEmail()">Share via Email<ion-icon name="mail-outline"></ion-icon></ion-button>
   <ion-button expand="full" (click)="ShareFacebook()">Share on Facebook<ion-icon name="logo-facebook"></ion-icon></ion-button>
   <ion-button expand="full" (click)="SendTwitter()">Share on Twitter<ion-icon name="logo-twitter"></ion-icon></ion-button>
   <ion-button expand="full" (click)="SendInstagram()">Message on Instagram<ion-icon name="logo-instagram"></ion-icon></ion-button>
 
-</ion-content> 
-</ion-card>
