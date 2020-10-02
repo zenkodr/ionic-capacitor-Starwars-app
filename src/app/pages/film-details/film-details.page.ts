@@ -63,7 +63,7 @@ export class FilmDetailsPage implements OnInit {
   }
 
   SendTwitter(){
-    this.socialSharing.shareViaTwitter(this.link)
+    this.socialSharing.shareViaTwitter(this.link, null /* url */)
   }
 
   SendInstagram(){
