@@ -86,7 +86,7 @@
   </ion-item>
   
   <ion-item class="person-card" lines="none">
-    <ion-icon name="color-filter-outline" slot="start"></ion-icon>
+    <ion-icon name="people-outline"></ion-icon>
     <ion-grid>
       <ion-row>
         <ion-col col-12 col-sm>
@@ -102,7 +102,7 @@
   </ion-item>
 
   <ion-item class="person-info" lines="none">
-    <ion-icon name="color-filter-outline" slot="start"></ion-icon>
+    <ion-icon name="calculator-outline"></ion-icon>
     <ion-grid>
       <ion-row>
         <ion-col col-12 col-sm>
@@ -117,7 +117,7 @@
   </ion-item>
   
   <ion-item class="person-card" lines="none">
-    <ion-icon name="color-filter-outline" slot="start"></ion-icon>
+    <ion-icon name="calculator-outline"></ion-icon>
     <ion-grid>
       <ion-row>
       
@@ -130,13 +130,32 @@
         </ion-col>        
       </ion-row>
     </ion-grid>
-  </ion-item>
+  </ion-item> <ion-grid>
+      
+    <ion-row class="ion-align-items-center">
+      <ion-col size="2" >
+        <ion-button color="medium-shade" (click)="ShareLink('text')">Login and Share<ion-icon name="share-social-outline" slot="start"></ion-icon></ion-button>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row class="ion-align-items-center">
+      <ion-col size="2" text-center>
+          <ion-button color="danger" (click)="SendEmail()"><ion-icon name="mail-outline" slot="start"></ion-icon></ion-button>
+      </ion-col>
+    
+      <ion-col size="2">
+        <ion-button color="primary" (click)="ShareFacebook()"><ion-icon name="logo-facebook" slot="start"></ion-icon></ion-button>
+      </ion-col> 
+    
+      <ion-col size="2">
+        <ion-button color="secondary" (click)="SendTwitter()"><ion-icon name="logo-twitter" slot="start"></ion-icon></ion-button>
+      </ion-col> 
+    
+      <ion-col size="2">
+        <ion-button color="tertiary" (click)="SendInstagram()"><ion-icon name="logo-instagram" slot="start"></ion-icon></ion-button>
+      </ion-col>
+    
+    </ion-row>
+    </ion-grid>   
 </ion-card>
-<br><br><br><br>
-
-<ion-button expand="full" (click)="SendEmail()">Share via Email<ion-icon name="mail-outline"></ion-icon></ion-button>
-  <ion-button expand="full" (click)="ShareFacebook()">Share on Facebook<ion-icon name="logo-facebook"></ion-icon></ion-button>
-  <ion-button expand="full" (click)="SendTwitter()">Share on Twitter<ion-icon name="logo-twitter"></ion-icon></ion-button>
-  <ion-button expand="full" (click)="SendInstagram()">Message on Instagram<ion-icon name="logo-instagram"></ion-icon></ion-button>
-
-</ion-content> 
+</ion-content>  
