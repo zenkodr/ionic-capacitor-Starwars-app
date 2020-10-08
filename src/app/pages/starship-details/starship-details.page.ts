@@ -59,11 +59,11 @@ export class StarshipDetailsPage implements OnInit {
   }
 
   SendTwitter(){
-    this.socialSharing.shareViaTwitter(this.link)
+    this.socialSharing.shareViaTwitter(this.link, null /* url */)
   }
 
   SendInstagram(){
-    this.socialSharing.shareViaInstagram(this.imgurl,null)
+    this.socialSharing.shareViaInstagram(null, this.imgurl)
   }
 
 }

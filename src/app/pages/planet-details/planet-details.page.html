@@ -7,10 +7,10 @@
     <ion-title>{{ planet?.name }}</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="unfavoritePlanet()" *ngIf="isFavorite2">
-        <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
+        <ion-icon name="star" slot="icon-only" color="warning"></ion-icon>
       </ion-button>
       <ion-button (click)="favoritePlanet()" *ngIf="!isFavorite2">
-        <ion-icon name="star-outline" slot="icon-only" color="secondary"></ion-icon>
+        <ion-icon name="star-outline" slot="icon-only" color="warning"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -21,7 +21,7 @@
   <ion-card *ngIf="planet" class="planet-card">
 
   <ion-item class="planet-card" lines="none">
-    <ion-icon name="cloudy-night-outline" slot="start"></ion-icon>
+    <ion-icon name="calculator-outline" slot="start"></ion-icon>
     <ion-grid>
       <ion-row>
         <ion-col col-12 col-sm>       
@@ -53,7 +53,7 @@
   </ion-item>
 
   <ion-item class="planet-card" lines="none">
-    <ion-icon name="cloudy-night-outline" slot="start"></ion-icon>
+    <ion-icon name="planet" slot="start"></ion-icon>
     <ion-grid>
       <ion-row>
         <ion-col col-12 col-sm>
@@ -69,7 +69,7 @@
   </ion-item>
 
   <ion-item class="planet-info" lines="none">
-    <ion-icon name="cloudy-night-outline" slot="start"></ion-icon>
+    <ion-icon name="calculator-outline" slot="start"></ion-icon>
     <ion-grid>
       <ion-row>
         <ion-col col-12 col-sm>
@@ -135,7 +135,7 @@
   </ion-item>
 
   <ion-item class="planet-info" lines="none">
-    <ion-icon name="planet" slot="start"></ion-icon>
+    <ion-icon name="calculator-outline" slot="start"></ion-icon>
     <ion-grid>
       <ion-row>
         <ion-col col-12 col-sm>
@@ -148,13 +148,32 @@
       </ion-row>
     </ion-grid>
   </ion-item>
-  
-  
+  <ion-grid>
+      
+    <ion-row class="ion-align-items-center">
+      <ion-col size="2" >
+        <ion-button color="medium-shade" (click)="ShareLink('text')">Login and Share<ion-icon name="share-social-outline" slot="start"></ion-icon></ion-button>
+      </ion-col>
+    </ion-row>
+    
+    <ion-row class="ion-align-items-center">
+      <ion-col size="2" text-center>
+          <ion-button color="danger" (click)="SendEmail()"><ion-icon name="mail-outline" slot="start"></ion-icon></ion-button>
+      </ion-col>
+    
+      <ion-col size="2">
+        <ion-button color="primary" (click)="ShareFacebook()"><ion-icon name="logo-facebook" slot="start"></ion-icon></ion-button>
+      </ion-col> 
+    
+      <ion-col size="2">
+        <ion-button color="secondary" (click)="SendTwitter()"><ion-icon name="logo-twitter" slot="start"></ion-icon></ion-button>
+      </ion-col> 
+    
+      <ion-col size="2">
+        <ion-button color="tertiary" (click)="SendInstagram()"><ion-icon name="logo-instagram" slot="start"></ion-icon></ion-button>
+      </ion-col>
+    
+    </ion-row>
+    </ion-grid>   
 </ion-card>
-<br><br><br><br><br>
-<ion-button expand="full" (click)="SendEmail()">Share via Email<ion-icon name="mail-outline"></ion-icon></ion-button>
-  <ion-button expand="full" (click)="ShareFacebook()">Share on Facebook<ion-icon name="logo-facebook"></ion-icon></ion-button>
-  <ion-button expand="full" (click)="SendTwitter()">Share on Twitter<ion-icon name="logo-twitter"></ion-icon></ion-button>
-  <ion-button expand="full" (click)="SendInstagram()">Message on Instagram<ion-icon name="logo-instagram"></ion-icon></ion-button>
-
-</ion-content> 
+</ion-content>  

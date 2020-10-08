@@ -7,10 +7,10 @@
     <ion-title>{{ person?.name }}</ion-title>
     <ion-buttons slot="end">
       <ion-button (click)="unfavoritePerson()" *ngIf="isFavorite1">
-        <ion-icon name="star" slot="icon-only" color="secondary"></ion-icon>
+        <ion-icon name="star" slot="icon-only" color="warning"></ion-icon>
       </ion-button>
       <ion-button (click)="favoritePerson()" *ngIf="!isFavorite1">
-        <ion-icon name="star-outline" slot="icon-only" color="secondary"></ion-icon>
+        <ion-icon name="star-outline" slot="icon-only" color="warning"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
@@ -130,7 +130,8 @@
         </ion-col>        
       </ion-row>
     </ion-grid>
-  </ion-item> <ion-grid>
+  </ion-item> 
+  <ion-grid>
       
     <ion-row class="ion-align-items-center">
       <ion-col size="2" >
