@@ -8,6 +8,10 @@
 
 ion-title {--color: #ffcc00;}
 
-ion-button {
-    --background: #990099;
+
+.float-right{
+    float:right; /* shift to right for alignment*/
+    width:80%; /* set a width, you can use max-width to limit this as well*/
 }
+
+button {text-align:center;}

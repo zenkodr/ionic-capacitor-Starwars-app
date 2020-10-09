@@ -145,29 +145,28 @@
         </ion-col>       
       </ion-row>
     </ion-grid>
-  </ion-item> <ion-grid>
+  </ion-item> 
+  <br>
+  
+  <ion-button expand="block" color="medium-shade" (click)="ShareLink('text')">Login to Share<ion-icon name="share-social-outline" slot="icon-only"></ion-icon></ion-button>
       
-    <ion-row class="ion-align-items-center">
-      <ion-col size="2" >
-        <ion-button color="medium-shade" (click)="ShareLink('text')">Login and Share<ion-icon name="share-social-outline" slot="start"></ion-icon></ion-button>
-      </ion-col>
-    </ion-row>
-    
-    <ion-row class="ion-align-items-center">
-      <ion-col size="2" text-center>
-          <ion-button color="danger" (click)="SendEmail()"><ion-icon name="mail-outline" slot="start"></ion-icon></ion-button>
+  <br>
+    <ion-grid>    
+      <ion-row class="float-right">
+      <ion-col size="2">
+          <ion-button color="danger" (click)="SendEmail()"><ion-icon name="mail-outline" slot="icon-only"></ion-icon></ion-button>
       </ion-col>
     
       <ion-col size="2">
-        <ion-button color="primary" (click)="ShareFacebook()"><ion-icon name="logo-facebook" slot="start"></ion-icon></ion-button>
+        <ion-button color="primary" (click)="ShareFacebook()"><ion-icon name="logo-facebook" slot="icon-only"></ion-icon></ion-button>
       </ion-col> 
     
       <ion-col size="2">
-        <ion-button color="secondary" (click)="SendTwitter()"><ion-icon name="logo-twitter" slot="start"></ion-icon></ion-button>
+        <ion-button color="secondary" (click)="SendTwitter()"><ion-icon name="logo-twitter" slot="icon-only"></ion-icon></ion-button>
       </ion-col> 
     
       <ion-col size="2">
-        <ion-button color="tertiary" (click)="SendInstagram()"><ion-icon name="logo-instagram" slot="start"></ion-icon></ion-button>
+        <ion-button color="tertiary" (click)="SendInstagram()"><ion-icon name="logo-instagram" slot="icon-only"></ion-icon></ion-button>
       </ion-col>
     
     </ion-row>
