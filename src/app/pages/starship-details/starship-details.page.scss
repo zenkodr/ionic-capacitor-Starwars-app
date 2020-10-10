@@ -11,7 +11,7 @@ ion-title {--color: #ffcc00;}
 
 .float-right{
     float:right; /* shift to right for alignment*/
-    width:70%; /* set a width, you can use max-width to limit this as well*/
+    width:80%; /* set a width, you can use max-width to limit this as well*/
 }
 
-ion-icon {--ion-grid-column-padding: -2px;}
+ion-icon {--padding: -2px;}
