@@ -23,7 +23,7 @@ export class ApiService {
   getPlanet(id) {
     return this.http.get(`https://swapi.dev/api/planets/${id}`);
   }
-
+  
   getStarships() {
     return this.http.get('https://swapi.dev/api/starships');
   }
