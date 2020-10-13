@@ -67,7 +67,7 @@ export class StarshipDetailsPage implements OnInit {
   }
 
   ShareWhatsapp(){
-    this.socialSharing.shareViaWhatsApp(this.text, this.imgurl, this.link)
+    this.socialSharing.shareViaWhatsApp(this.link)
   }    
 
 }
