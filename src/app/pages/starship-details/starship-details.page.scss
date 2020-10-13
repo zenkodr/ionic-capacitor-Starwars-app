@@ -9,13 +9,8 @@
 ion-title {--color: #ffcc00;}
 
 
-.float-right{
-    float:right; /* shift to right for alignment*/
-    width:70%; /* set a width, you can use max-width to limit this as well*/
+.ion-align-items-center {
+    text-align: center;
 }
 
-.ion-justify-content-center {justify-content: center;}
-
-ion-button {--padding-right: 10px;}
-          
 .login {text-align:center;}
