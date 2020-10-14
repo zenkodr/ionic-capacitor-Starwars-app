@@ -21,10 +21,9 @@
   <ion-card *ngIf="starship" class="starship-card">
 
   <ion-item class="starship-card" lines="none">
-    <ion-icon name="star-half-outline" color="warning" slot="start"></ion-icon>
+    <ion-icon name="star-half-outline" size="small" color="warning" slot="start"></ion-icon>
     <ion-grid>
       <ion-row>
-
         <ion-col size="12">
           <div>Hyperdrive Rating:</div>
         </ion-col>
@@ -33,22 +32,6 @@
           <div>{{ starship.hyperdrive_rating}}</div>
         </ion-col>
        
-      </ion-row>
-    </ion-grid>
-  </ion-item>
-
-  <ion-item class="starship-info" lines="none">
-    <ion-icon name="calculator-outline" size="small" color="warning" slot="start"></ion-icon>
-    <ion-grid>
-      <ion-row>
-        <ion-col size="12">
-          <div>Supplies:</div>
-        </ion-col>
-        
-        <ion-col size="12">
-          <div>{{ starship.consumables }}</div>
-        </ion-col>
-      
       </ion-row>
     </ion-grid>
   </ion-item>
@@ -142,6 +125,22 @@
         <ion-col size="12">
           <div>{{ starship.length }}</div>
         </ion-col>       
+      </ion-row>
+    </ion-grid>
+  </ion-item>
+
+  <ion-item class="starship-info" lines="none">
+    <ion-icon name="calculator-outline" size="small" color="warning" slot="start"></ion-icon>
+    <ion-grid>
+      <ion-row>
+        <ion-col size="12">
+          <div>Consumables:</div>
+        </ion-col>
+        
+        <ion-col size="12">
+          <div>{{ starship.consumables }}</div>
+        </ion-col>
+      
       </ion-row>
     </ion-grid>
   </ion-item>
