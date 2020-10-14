@@ -53,7 +53,6 @@ export class FilmDetailsPage implements OnInit {
     });
 
   }
-  
   SendEmail(){
     this.socialSharing.shareViaEmail(this.link, this.subject, ['email@address.com'])
   }
@@ -67,7 +66,11 @@ export class FilmDetailsPage implements OnInit {
   }
 
   SendInstagram(){
-    this.socialSharing.shareViaInstagram(null, this.imgurl)
+    this.socialSharing.shareViaInstagram(this.text, this.imgurl)
   }
+
+  ShareWhatsapp(){
+    this.socialSharing.shareViaWhatsApp(this.link)
+  }    
 
 }

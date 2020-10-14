@@ -46,32 +46,36 @@
       {{ film.release_date | date }}
     </ion-item>
 
-    <ion-grid>
+    <div class="login"><em>Login to Share</em></div>
       
-      <ion-row class="ion-align-items-center">
-        <ion-col size="2" >
-          <ion-button color="medium-shade" (click)="ShareLink('text')">Login and Share<ion-icon name="share-social-outline" slot="start"></ion-icon></ion-button>
+    <br>
+      <ion-grid>    
+        <ion-row class="ion-justify-content-center">
+        <ion-col size="2">
+            <ion-icon name="share-social-outline" color="warning" style="padding-top:13px" ></ion-icon>
         </ion-col>
-      </ion-row>
-      
-      <ion-row class="ion-align-items-center">
-        <ion-col size="2" text-center>
-            <ion-button color="danger" (click)="SendEmail()"><ion-icon name="mail-outline" slot="start"></ion-icon></ion-button>
+  
+        <ion-col size="2">
+            <ion-button size="small" color="warning" (click)="SendEmail()"><ion-icon name="mail-outline"></ion-icon></ion-button>
         </ion-col>
       
         <ion-col size="2">
-          <ion-button color="primary" (click)="ShareFacebook()"><ion-icon name="logo-facebook" slot="start"></ion-icon></ion-button>
-        </ion-col> 
-      
-        <ion-col size="2">
-          <ion-button color="secondary" (click)="SendTwitter()"><ion-icon name="logo-twitter" slot="start"></ion-icon></ion-button>
-        </ion-col> 
-      
-        <ion-col size="2">
-          <ion-button color="tertiary" (click)="SendInstagram()"><ion-icon name="logo-instagram" slot="start"></ion-icon></ion-button>
+          <ion-button size="small" color="primary" (click)="ShareFacebook()"><ion-icon name="logo-facebook"></ion-icon></ion-button>
         </ion-col>
       
+        <ion-col size="2">
+          <ion-button size="small" color="secondary" (click)="SendTwitter()"><ion-icon name="logo-twitter"></ion-icon></ion-button>
+        </ion-col>
+      
+        <ion-col size="2">
+          <ion-button size="small" color="tertiary" (click)="SendInstagram()"><ion-icon name="logo-instagram"></ion-icon></ion-button>
+        </ion-col>
+  
+        <ion-col size="2">
+          <ion-button size="small" color="success" (click)="ShareWhatsapp()"><ion-icon name="logo-whatsapp"></ion-icon></ion-button>
+        </ion-col>  
+        
       </ion-row>
       </ion-grid>   
   </ion-card>
-</ion-content>  
+  </ion-content>  
