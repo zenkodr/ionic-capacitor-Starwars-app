@@ -20,35 +20,35 @@
     <ion-card *ngIf="film" class="movie-card">
     
     <ion-item class="movie-card" lines="none">
-      <p>Story:</p>
+      <p class="story" style="color: #ffcc00;">Story:</p>
     </ion-item>
 
     <ion-item class="movie-info" lines="none">
-      <ion-icon name="film-outline" color="warning" slot="start"></ion-icon>
+      <ion-icon name="film-outline" size="small" color="warning" slot="start"></ion-icon>
       {{ film.opening_crawl }}
     </ion-item>
  
     <ion-item class="movie-card" lines="none">      
-      <p>Director:</p>
+      <p class="story" style="color: #ffcc00;">Director:</p>
     </ion-item>
 
     <ion-item class="movie-info" lines="none">
-      <ion-icon name="film-outline" color="warning" slot="start"></ion-icon>
+      <ion-icon name="film-outline" size="small" color="warning" slot="start"></ion-icon>
       {{ film.director }}
     </ion-item>
  
     <ion-item class="movie-card" lines="none">
-      <p>Release Date:</p>
+      <p class="story" style="color: #ffcc00;">Release Date:</p>
     </ion-item>
 
     <ion-item class="movie-info" lines="none">
-      <ion-icon name="calendar" color="warning" slot="start"></ion-icon>
+      <ion-icon name="calendar" size="small" color="warning" slot="start"></ion-icon>
       {{ film.release_date | date }}
     </ion-item>
 
-    <div class="login"><em>Login to Share</em></div>
-      
-    <br>
+    <br>  
+    <div class="login" style="color: #ffcc00;"><em>Login to Share</em></div>
+
       <ion-grid>    
         <ion-row class="ion-justify-content-center">
         <ion-col size="2">

@@ -21,7 +21,7 @@
   <ion-card *ngIf="person" class="person-card">
 
   <ion-item class="person-card" lines="none">
-    <ion-icon name="transgender-outline" color="warning" slot="start"></ion-icon>
+    <ion-icon name="transgender-outline" size="small" color="warning" slot="start"></ion-icon>
     <ion-grid>
       <ion-row>
 
@@ -29,7 +29,8 @@
           <div>Gender:</div>
         </ion-col>
         
-        <ion-col col-12 col-sm>
+        <ion-col size="12">      
+
           <div>{{ person.gender }}</div>
         </ion-col>
        
@@ -38,14 +39,16 @@
   </ion-item>
 
   <ion-item class="person-info" lines="none">
-    <ion-icon name="color-filter-outline" color="warning" slot="start"></ion-icon>
+    <ion-icon name="color-filter-outline" size="small" color="warning" slot="start"></ion-icon>
     <ion-grid>
       <ion-row>
-        <ion-col col-12 col-sm>
+        <ion-col size="12">      
+
           <div>Eye Color:</div>
         </ion-col>
         
-        <ion-col col-12 col-sm>
+        <ion-col size="12">      
+
           <div>{{ person.eye_color }}</div>
         </ion-col>
       
@@ -54,10 +57,11 @@
   </ion-item>
 
   <ion-item class="person-card" lines="none">
-    <ion-icon name="color-filter-outline" color="warning" slot="start"></ion-icon>
+    <ion-icon name="color-filter-outline" size="small" color="warning" slot="start"></ion-icon>
     <ion-grid>
       <ion-row>
-        <ion-col col-12 col-sm>
+        <ion-col size="12">      
+
           <div>Hair Color:</div>
         </ion-col>
         
@@ -70,10 +74,11 @@
   </ion-item>
 
   <ion-item class="person-info" lines="none">
-    <ion-icon name="color-filter-outline" color="warning" slot="start"></ion-icon>
+    <ion-icon name="color-filter-outline" size="small" color="warning" slot="start"></ion-icon>
     <ion-grid>
       <ion-row>
-        <ion-col col-12 col-sm>
+        <ion-col size="12">      
+
           <div>Skin Color:</div>
         </ion-col>
         
@@ -86,10 +91,11 @@
   </ion-item>
   
   <ion-item class="person-card" lines="none">
-    <ion-icon name="people-outline" color="warning" slot="start"></ion-icon>
+    <ion-icon name="people-outline" size="small" color="warning" slot="start"></ion-icon>
     <ion-grid>
       <ion-row>
-        <ion-col col-12 col-sm>
+        <ion-col size="12">      
+
           <div>Year of Birth:</div>
         </ion-col>
         
@@ -102,14 +108,16 @@
   </ion-item>
 
   <ion-item class="person-info" lines="none">
-    <ion-icon name="calculator-outline" color="warning" slot="start"></ion-icon>
+    <ion-icon name="calculator-outline" size="small" color="warning" slot="start"></ion-icon>
     <ion-grid>
       <ion-row>
-        <ion-col col-12 col-sm>
+        <ion-col size="12">      
+
           <div>Height:</div>
         </ion-col>
         
-        <ion-col col-12 col-sm>
+        <ion-col size="12">      
+
           <div>{{ person.height }}</div>
         </ion-col>       
       </ion-row>
@@ -117,11 +125,12 @@
   </ion-item>
   
   <ion-item class="person-card" lines="none">
-    <ion-icon name="calculator-outline" color="warning" slot="start"></ion-icon>
+    <ion-icon name="calculator-outline" size="small" color="warning" slot="start"></ion-icon>
     <ion-grid>
       <ion-row>
       
-        <ion-col col-12 col-sm>
+        <ion-col size="12">      
+
           <div>Mass:</div>
         </ion-col>
         
@@ -131,10 +140,11 @@
       </ion-row>
     </ion-grid>
   </ion-item>  
-  
-  <div class="login"><em>Login to Share</em></div>
+
+  <br>  
+  <div class="login" style="color: #ffcc00;"><em>Login to Share</em></div>
+
       
-  <br>
     <ion-grid>    
       <ion-row class="ion-justify-content-center">
       <ion-col size="2">
@@ -162,6 +172,6 @@
       </ion-col>  
       
     </ion-row>
-    </ion-grid>   
+  </ion-grid>   
 </ion-card>
 </ion-content>  
