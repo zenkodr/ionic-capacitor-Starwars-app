@@ -32,6 +32,9 @@ npm-debug.log*
 /e2e/
 /android/
 
+/resources/android/icon/
+/resources/android/splash/
+
 #google-services
 google-services.json
 
