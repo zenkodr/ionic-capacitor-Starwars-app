@@ -33,6 +33,8 @@ npm-debug.log*
 /android
 /resources/android
 
+/resources/
+
 #google-services
 google-services.json
 
