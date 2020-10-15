@@ -30,7 +30,8 @@ npm-debug.log*
 /plugins
 /www
 /e2e/
-/android/
+/android
+/resources/android
 
 #google-services
 google-services.json
